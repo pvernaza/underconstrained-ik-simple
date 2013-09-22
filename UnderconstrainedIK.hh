@@ -4,6 +4,8 @@
 #include <Eigen/Dense>
 #include <vector>
 
+namespace underconstrained_ik {
+
 struct UCJointIKState { 
   int index;                  // index of the joint
   bool isKnown;               // true iff. the joint angle is known
@@ -186,5 +188,7 @@ SolveIKPath(KinModel const& kinModel,
 
   return ikStatePath;
 }
+
+};
 
 #endif
